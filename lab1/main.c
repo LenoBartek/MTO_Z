@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
+#define #k %s
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
-			printf("%s",param);
+			printf("#k", toupper(param));
+			printf("#k", tolower(param));
+			printf("#k",param);
 		}else
 			putchar(format_string[i]);
 	}
