@@ -1,25 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <cstdlib>
 
-#define #k %s
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
-			
-			if(atoi(param) => 65 && atoi(param) <= 90)
+
+			for (size_t i = 0; i < strlen(param); ++i)
 			{
-				param = param + 32;
-			}
-			else
-			{
-				param = param - 32;
-			}			
-			printf("#k", toupper(param));
-			printf("#k", tolower(param));
-			printf("#k",param);
+				if(param[i] >= 65 && param[i] <= 90)
+				{
+					param[i] = tolower(param[i]);
+				}
+				else
+				{
+					param[i] = toupper(param[i]);
+				}		
+			}	
+
+			printf("%s",param);
 		}else
 			putchar(format_string[i]);
 	}
