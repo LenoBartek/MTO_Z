@@ -20,7 +20,31 @@ int my_printf(char *format_string, char *param){
 			}	
 
 			printf("%s",param);
-		}else
+		}
+		else if((format_string[i] == '#') && (format_string[i+1] == '.'))
+		{
+			i++;
+			char format[60]="%.";
+
+			
+			
+			size_t j = 2;
+			while(format_string[i+j] >= '0' && format_string[i+j] <= '9')
+			{
+				size_t k = strlen(format);
+				format[k] = format_string[i+j];
+				++j;
+			}
+			
+			if(format_string[i+j+1] == 'k')
+			{
+				size_t format_size = strlen(format);
+				format[format_size] = 's';
+				printf(format, param);
+			}
+		}
+		
+		else
 			putchar(format_string[i]);
 	}
 	puts("");
