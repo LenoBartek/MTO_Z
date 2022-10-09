@@ -9,12 +9,12 @@ fjdlsjfkl TEST8 oooolll
 rwrewrew TEST9 fjdslkjfdl
 fjdlskjfldjflj TEST10 rewrewrew
 dsklfklsdfjklsdjfkl #
-aaaa Xk test
-t ddddddddddddddddddddddddddddddddddddddddddddk
-adadaasd 4k 12345678
-adadaasd 1k AAADDDDBBBB
-adadaasd 999k AAADDDD  ^%$^$%^$^$^ BBBBdasdasd             asdasd 
-asdasd -10k asdasdasdasdasdasd
-asdasd 0k asdasdasdasdasdasd
-asdasd 0h asdasdasdasdasdasd
+aaaa test12k test
+t test13dd
+adadaasd tes aaa
+adadaasd t aaa
+adadaasd test16 aaa
+asdasd test1710k aaa
+asdasd test18 aaa
+asdasd test190h aaa
 

@@ -1,47 +1,47 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
+
+void swapLetters(char *param);
 
 int my_printf(char *format_string, char *param){
 	for(int i=0;i<strlen(format_string);i++){
 		if((format_string[i] == '#') && (format_string[i+1] == 'k')){
 			i++;
-
-			for (size_t i = 0; i < strlen(param); ++i)
-			{
-				if(param[i] >= 65 && param[i] <= 90)
-				{
-					param[i] = tolower(param[i]);
-				}
-				else
-				{
-					param[i] = toupper(param[i]);
-				}		
-			}	
-
+			swapLetters(param);
 			printf("%s",param);
 		}
 		else if((format_string[i] == '#') && (format_string[i+1] == '.'))
 		{
-			i++;
-			char format[60]="%.";
+			size_t j = i+2;
+			char number[60];
 
-			
-			
-			size_t j = 2;
-			while(format_string[i+j] >= '0' && format_string[i+j] <= '9')
+			for(size_t counter = 0; format_string[j] >= '0' && format_string[j] <= '9'; ++j, ++counter)
 			{
-				size_t k = strlen(format);
-				format[k] = format_string[i+j];
-				++j;
+				number[counter] = format_string[j];
 			}
-			
-			if(format_string[i+j+1] == 'k')
+				
+			if(format_string[j] == 'k')
 			{
-				size_t format_size = strlen(format);
-				format[format_size] = 's';
-				printf(format, param);
+				size_t amountToPrint = atoi(number);
+				if(amountToPrint <= 0 || amountToPrint > strlen(param))
+				{
+					amountToPrint = strlen(param);
+				}
+
+				for(size_t i = 0; i < amountToPrint; ++i)
+				{
+					printf("%c", param[i]);
+				}
 			}
+			else 
+			{
+				printf("%s",param);
+			}
+
+			i = j;
+		
 		}
 		
 		else
@@ -57,4 +57,20 @@ int main(int argc, char *argv[]){
 		my_printf(buf,buf2);
 	}
 	return 0;
+}
+
+
+void swapLetters(char *param)
+{
+	for (size_t i = 0; i < strlen(param); ++i)
+	{
+		if(param[i] >= 65 && param[i] <= 90)
+		{
+			param[i] = tolower(param[i]);
+		}
+		else
+		{
+			param[i] = toupper(param[i]);
+		}		
+	}	
 }

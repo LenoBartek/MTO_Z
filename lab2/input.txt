@@ -22,18 +22,18 @@ dsklfklsdfjklsdjfkl #
 test11
 aaaa #.Xk test
 test12
-t #.ddddddddddddddddddddddddddddddddddddddddddddk
+t #.ddd
 test13
-adadaasd #.4k 12345678
+adadaasd #.3k aaa
 test14
-adadaasd #.1k AAADDDDBBBB
+adadaasd #.1k aaa
 test15
-adadaasd #.999k AAADDDD  ^%$^$%^$^$^ BBBBdasdasd             asdasd 
+adadaasd #.999k aaa
 test16
-asdasd #.-10k asdasdasdasdasdasd
+asdasd #.-10k aaa
 test17
-asdasd #.0k asdasdasdasdasdasd
+asdasd #.0k aaa
 test18
-asdasd #.0h asdasdasdasdasdasd
+asdasd #.-0h aaa
 test19
 
