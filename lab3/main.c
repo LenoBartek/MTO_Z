@@ -55,7 +55,6 @@ int my_printf(char *format_string, char *param){
 			{
 				i = j;
 				size_t amountToPrint = atoi(number);
-				//printf(" tu: %d tu: ", amountToPrint);
 		
 				if(amountToPrint <= 0)
 				{
@@ -84,8 +83,6 @@ int my_printf(char *format_string, char *param){
 						printf("%c", buff[i]);
 					}
 				}
-
-				
 			}
 		}
 		else
