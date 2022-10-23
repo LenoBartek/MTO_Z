@@ -39,11 +39,59 @@ int my_printf(char *format_string, char *param){
 			{
 				printf("%s",param);
 			}
-
 			i = j;
-		
 		}
+		else if (format_string[i] == '#' && format_string[i+1] >= '0' && format_string[i+1] <= '9') 
+		{
+			size_t j = i+1;
+			char number[60] = "";
+
+			for(size_t counter = 0; format_string[j] >= '0' && format_string[j] <= '9'; ++j, ++counter)
+			{
+				number[counter] = format_string[j];
+			}
+
+			if(format_string[j] == 'k')
+			{
+				i = j;
+				size_t amountToPrint = atoi(number);
+				//printf(" tu: %d tu: ", amountToPrint);
 		
+				if(amountToPrint <= 0)
+				{
+					amountToPrint = strlen(param);
+					for(size_t i = 0; i < amountToPrint; ++i)
+					{
+						printf("%c", param[i]);
+					}
+				}
+				else if(amountToPrint < strlen(param))
+				{
+					for(size_t i = 0; i < amountToPrint; ++i)
+					{
+						printf("%c", param[i]);
+					}
+				}
+				else if (amountToPrint > strlen(param))
+				{
+					size_t amountOfSpace = amountToPrint - strlen(param);
+					char buff[1024] = "";
+
+					for(size_t i=0; i<amountOfSpace; ++i)
+					{
+						buff[i] = ' ';
+					}
+					strcat(buff, param);
+
+					for(size_t i = 0; i < amountToPrint; ++i)
+					{
+						printf("%c", buff[i]);
+					}
+				}
+
+				
+			}
+		}
 		else
 			putchar(format_string[i]);
 	}
