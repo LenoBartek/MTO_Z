@@ -59,11 +59,7 @@ int my_printf(char *format_string, char *param){
 		
 				if(amountToPrint <= 0)
 				{
-					amountToPrint = strlen(param);
-					for(size_t i = 0; i < amountToPrint; ++i)
-					{
-						printf("%c", param[i]);
-					}
+					printf("");
 				}
 				else if(amountToPrint < strlen(param))
 				{

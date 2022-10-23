@@ -20,4 +20,8 @@ asdasd test190h aaa
 test    2.k (test20)
 test tes (test21)
 test          test22 (test22)
+test #-10k (test23)
+test  (test24)
+test t (test25)
+test test26 (test26)
 
