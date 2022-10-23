@@ -36,4 +36,10 @@ asdasd #.0k aaa
 test18
 asdasd #.-0h aaa
 test19
+test    #2.k (test20)
+test20
+test #3k (test21)
+test21
+test #15k (test22)
+test22
 
