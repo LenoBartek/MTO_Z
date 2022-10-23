@@ -42,4 +42,12 @@ test #3k (test21)
 test21
 test #15k (test22)
 test22
+test #-10k (test23)
+test23
+test #0k (test24)
+test24
+test #1k (test25)
+test25
+test #.k (test26)
+test26
 
