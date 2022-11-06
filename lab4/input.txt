@@ -1,4 +1,4 @@
-test 1 [ g ]
+test 1 g
 2
 test 2 [ #g ]
 123
