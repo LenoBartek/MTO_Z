@@ -9,7 +9,7 @@ namespace lab0
 			if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 				
 				Int32 original = 0;
-				Int32 val = 0;
+				Int32 val = 0, flag = 0;
 				if(Int32.TryParse(param, out original)) {
 					val = original;
 					if(original < 0) {
@@ -20,7 +20,16 @@ namespace lab0
 					{
 						Int32 r = val % 10;
 						reverse = (reverse*10) + r;
+						if(reverse > Int32.MaxValue) {
+							flag = 1;
+							break;
+						}
 						val = val / 10;
+					}
+					if(flag == 1){
+						Console.Write("greater than the max limit");
+						flag = 0;
+						continue;
 					}
 					if(original < 0)
 					{
