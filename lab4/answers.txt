@@ -6,4 +6,4 @@ test 5 [ err ]
 test 6 [ -2 ]
 test 7 # g
 test 8 [ err ]
-
+test 9 [ err ]
