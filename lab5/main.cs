@@ -8,31 +8,6 @@ namespace lab0
 		for(int i=0;i<format_string.Length;i++){
 			if((format_string[i] == '#') && (format_string[i+1] == 'g')){
 				
-				Int32 original = 0;
-				Int32 val = 0;
-				if(Int32.TryParse(param, out original)) {
-					val = original;
-					if(original < 0) {
-						val = Math.Abs(original);
-					}
-					Int64 reverse = 0;
-					while (val > 0)
-					{
-						Int32 r = val % 10;
-						reverse = (reverse*10) + Convert.ToInt64(r);
-						val = val / 10;
-					}
-					
-					if(original < 0)
-					{
-						reverse = (reverse * (-1));
-					}
-					
-					Console.Write(reverse);
-				}
-				else {
-					Console.Write("err");
-				}
 
 				i++;
 			}else{
