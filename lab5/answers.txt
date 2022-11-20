@@ -1,12 +1,1 @@
-test 1 g
-test 2 [ 321 ]
-test 3 [ err ]
-test 4 [ err ]
-test 5 [ err ]
-test 6 [ -2 ]
-test 7 # g
-test 8 [ err ]
-test 9 [ err ]
-test 10 [ 31321321 ]
-test 11 [ 7463847412 ]
-test 12 [ -7463847412 ]
+test 1 012
