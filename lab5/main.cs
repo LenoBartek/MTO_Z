@@ -21,12 +21,11 @@ namespace lab0
 					}
 					else 
 					{
-
 						break;	
 					}
 				}
 
-				if(format_string[i+1] == 'g' && int.TryParse(strNumber, out x) && int.TryParse(format_string[i].ToString(), out y)){
+				if(format_string[i+1] == 'g' && int.TryParse(strNumber, out x)){
 					string temp="";
 					for(int k=0; k < param.Length; k++)
 					{
@@ -62,7 +61,7 @@ namespace lab0
 						}
 					}
 
-					if(x > param.Length)
+					if(x >= param.Length)
 					{
 						string result = new StringBuilder().Insert(0, " ", x-param.Length).ToString();
 						result += temp;
