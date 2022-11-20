@@ -10,8 +10,8 @@ namespace lab0
 			
 			if(format_string[i] == '#'){
 				string strNumber = "";
-				int x=0;
-			
+				int x=0, y = 0;
+
 				for(int j=i+1; j<format_string.Length;j++)
 				{
 					if(int.TryParse(format_string[j].ToString(), out x))
@@ -21,11 +21,12 @@ namespace lab0
 					}
 					else 
 					{
+
 						break;	
 					}
 				}
 
-				if(format_string[i+1] == 'g' && int.TryParse(strNumber, out x)){
+				if(format_string[i+1] == 'g' && int.TryParse(strNumber, out x) && int.TryParse(format_string[i].ToString(), out y)){
 					string temp="";
 					for(int k=0; k < param.Length; k++)
 					{
