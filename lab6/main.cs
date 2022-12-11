@@ -8,11 +8,12 @@ namespace lab0
 	static void my_printf(string format_string, string param){
 		for(int i=0;i<format_string.Length;i++){
 			
-			if(format_string[i] == '#'){
+			if(format_string[i] == '#' && format_string[i+i] == '.'){
+
 				string strNumber = "";
 				int x=0, y = 0;
 
-				for(int j=i+1; j<format_string.Length;j++)
+				for(int j=i+2; j<format_string.Length;j++)
 				{
 					if(int.TryParse(format_string[j].ToString(), out x))
 					{
@@ -27,38 +28,20 @@ namespace lab0
 
 				if(format_string[i+1] == 'g' && int.TryParse(strNumber, out x)){
 					string temp="";
-					for(int k=0; k < param.Length; k++)
+					string firstChar;
+					int num = 0; 
+					//string new = str.Substring(0, 1); // "1"
+
+					for (int k=0; i<param.Length;k++)
 					{
-						if(param[k] == '1'){
-							temp+= "0";
+						firstChar = param.Substring(0, k);
+
+						if (int.TryParse(firstChar, out num))
+						{
+							num = ((num *9+1)%10);			
 						}
-						else if(param[k] == '2'){
-							temp+= "1";
-						}
-						else if(param[k] == '3'){
-							temp+= "2";
-						}
-						else if(param[k] == '4'){
-							temp+= "3";
-						}
-						else if(param[k] == '5'){
-							temp+= "4";
-						}
-						else if(param[k] == '6'){
-							temp+= "5";
-						}
-						else if(param[k] == '7'){
-							temp+= "6";
-						}
-						else if(param[k] == '8'){
-							temp+= "7";
-						}
-						else if(param[k] == '9'){
-							temp+= "8";
-						}
-						else if(param[k] == '0'){
-							temp+= "9";
-						}
+
+						temp = temp + num.ToString();
 					}
 
 					if(x >= param.Length)
@@ -74,8 +57,7 @@ namespace lab0
 					else if(x == 0)
 					{
 						Console.Write(temp);
-					}
-					
+					}	
 				}
 
 				i++;
