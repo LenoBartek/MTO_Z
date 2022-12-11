@@ -33,9 +33,10 @@ namespace lab0
 					int num = 0; 
 					//string new = str.Substring(0, 1); // "1"
 
-					for (int k=0; i<param.Length;k++)
+					for (int k=0; k<param.Length;k++)
 					{
-						firstChar = param.Substring(0, k);
+						string p = param;
+						firstChar = p.Substring(0, k);
 
 						if (int.TryParse(firstChar, out num))
 						{
