@@ -10,10 +10,11 @@ namespace lab0
 			
 			if(format_string[i] == '#' && format_string[i+i] == '.'){
 
+				i++;
 				string strNumber = "";
-				int x=0, y = 0;
+				int x=0;
 
-				for(int j=i+2; j<format_string.Length;j++)
+				for(int j=i+1; j<format_string.Length;j++)
 				{
 					if(int.TryParse(format_string[j].ToString(), out x))
 					{
