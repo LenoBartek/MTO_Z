@@ -29,6 +29,8 @@ namespace lab0
             for (int i = 0; i < hex.Length; i++)
             {
                 char c = hex[i];
+				c = char.ToLowerInvariant(c);
+
                 if (c >= 'a' && c <= 'f')
                 {
                     c = (char)(c + 'g' - 'a');
