@@ -8,4 +8,5 @@ test 4 #j
 0
 test 6 #j
 10
-
+test 6 #jddsad
+10
