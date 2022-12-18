@@ -4,5 +4,6 @@ test 2 #j
 255
 test 3 #j
 -71
-
+test 4 #j
+0
 
