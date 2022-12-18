@@ -6,4 +6,6 @@ test 3 #j
 -71
 test 4 #j
 0
+test 6 #j
+10
 
